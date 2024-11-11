@@ -4,12 +4,12 @@
 # Praktikum 1: Dasar State dengan Model-View
 
 **1. Jelaskan maksud dari langkah 4 pada praktikum tersebut! Mengapa dilakukan demikian?**
-Pada , file `data_layer.dart` dibuat untuk menggabungkan ekspor model `plan.dart` dan `task.dart`. Tujuannya agar proses impor menjadi lebih mudah dan rapi, karena hanya perlu mengimpor satu file `data_layer.dart` untuk mengakses semua model yang dibutuhkan. Ini membuat kode lebih efisien, mudah dipelihara, dan lebih mudah dibaca.
+Pada , file data_layer.dart dibuat untuk menggabungkan ekspor model plan.dart dan task.dart. Tujuannya agar proses impor menjadi lebih mudah dan rapi, karena hanya perlu mengimpor satu file data_layer.dart untuk mengakses semua model yang dibutuhkan. Ini membuat kode lebih efisien, mudah dipelihara, dan lebih mudah dibaca.
 
 **2. Mengapa perlu variabel plan di langkah 6 pada praktikum tersebut? Mengapa dibuat konstanta ?**
-Variabel `plan` pada Langkah 6 diperlukan untuk menyimpan data rencana yang berisi daftar tugas dalam aplikasi. Variabel ini digunakan untuk memanipulasi dan memperbarui informasi rencana, seperti menambahkan tugas baru atau mengubah status tugas.
+Variabel plan pada Langkah 6 diperlukan untuk menyimpan data rencana yang berisi daftar tugas dalam aplikasi. Variabel ini digunakan untuk memanipulasi dan memperbarui informasi rencana, seperti menambahkan tugas baru atau mengubah status tugas.
 
-Dibuat sebagai konstanta karena pada saat pembuatan objek `Plan`, nilai-nilai default seperti nama dan daftar tugas ditetapkan melalui konstruktor. Menggunakan konstanta memastikan nilai awal objek tidak dapat diubah setelah objek dibuat, yang membantu menjaga integritas data dan menghindari perubahan yang tidak diinginkan.
+Dibuat sebagai konstanta karena pada saat pembuatan objek Plan, nilai-nilai default seperti nama dan daftar tugas ditetapkan melalui konstruktor. Menggunakan konstanta memastikan nilai awal objek tidak dapat diubah setelah objek dibuat, yang membantu menjaga integritas data dan menghindari perubahan yang tidak diinginkan.
 
 **Capture Pratikum 1**
 
@@ -37,3 +37,38 @@ Tujuannya adalah untuk mempermudah perhitungan dan penampilan status progres dar
 ![Screenshot 2024-11-11 092053](https://github.com/user-attachments/assets/3cd56ff8-4ef9-4fc0-b3d3-17772b0c21b0)
 
 # Tugas Praktikum 3: State di Multiple Screens
+
+**Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!**
+
+![9ce81bcd2817adc8](https://github.com/user-attachments/assets/4da9e321-1241-41fd-9327-e9d0eeb3672a)
+
+Diagram tersebut menjelaskan perbandingan dua struktur widget pada aplikasi Flutter, yang melibatkan navigasi antar layar menggunakan Navigator.push.
+
+1. **Struktur Kiri (Sebelum Navigasi)**
+   - **MaterialApp**: Komponen utama aplikasi Flutter.
+   - **PlanProvider**: Widget yang menyediakan data untuk widget turunannya.
+   - **PlanCreatorScreen**: Halaman awal yang menampilkan antarmuka pengguna.
+   - **Column**: Widget yang mengatur elemen dalam tata letak vertikal.
+   - **TextField**: Komponen input teks.
+   - **Expanded**: Widget yang mengisi ruang yang tersisa.
+   - **ListView**: Widget untuk menampilkan daftar item yang bisa digulir.
+
+   Struktur ini menggambarkan halaman awal yang memiliki komponen interaktif seperti input teks dan daftar elemen yang bisa digulir.
+
+2. **Struktur Kanan (Setelah Navigasi dengan Navigator.push)**
+   - **MaterialApp**: Tetap sebagai komponen utama aplikasi.
+   - **PlanScreen**: Layar baru yang ditampilkan setelah navigasi.
+   - **Scaffold**: Struktur kerangka dasar layar dengan dukungan AppBar, body, dll.
+   - **Column**: Masih digunakan untuk tata letak vertikal.
+   - **Expanded**: Digunakan untuk mengisi ruang kosong dalam Column.
+   - **SafeArea**: Widget yang menjaga konten agar tidak terhalang oleh elemen lain, seperti status bar.
+   - **ListView** dan **Text**: Digunakan untuk menampilkan daftar item dan teks.
+
+Diagram ini mengilustrasikan bagaimana aplikasi berpindah dari satu layar ke layar lainnya. Navigator.push digunakan untuk navigasi dari PlanCreatorScreen ke PlanScreen, yang memiliki antarmuka lebih lengkap dengan elemen Scaffold dan SafeArea untuk memastikan konten tampil aman di layar.
+
+**Hasil Pratikum**
+
+![2024-11-11 09-43-47](https://github.com/user-attachments/assets/0be41eaf-fd3a-4c8f-8486-820b5a17ebc0)
+
+
+
