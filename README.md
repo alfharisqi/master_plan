@@ -33,6 +33,7 @@ Pada langkah 1, InheritedWidget adalah widget yang memungkinkan data diteruskan 
 Tujuannya adalah untuk mempermudah perhitungan dan penampilan status progres dari task yang ada pada Plan. Dengan menambahkan dua method ini, kita dapat dengan mudah menampilkan jumlah task yang selesai dan progres keseluruhan tanpa harus menghitungnya berulang-ulang di tempat lain dalam kode, membuat logika aplikasi menjadi lebih terstruktur dan efisien.
 
 **Capture Pratikum 2** 
+
 ![Screenshot 2024-11-11 092053](https://github.com/user-attachments/assets/3cd56ff8-4ef9-4fc0-b3d3-17772b0c21b0)
 
 # Tugas Praktikum 3: State di Multiple Screens
