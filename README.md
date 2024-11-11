@@ -14,3 +14,12 @@ Dibuat sebagai konstanta karena pada saat pembuatan objek `Plan`, nilai-nilai de
 **Capture Pratikum 1**
 
 ![Screenshot 2024-11-11 090109](https://github.com/user-attachments/assets/af367f28-f065-4bf1-810f-a5697f543119)
+
+**3. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?**
+Pada **Langkah 11** dan **Langkah 13**, dua metode penting dalam siklus hidup **StatefulWidget** digunakan, yaitu `initState()` dan `dispose()`.
+
+- initState()` (Langkah 11): Metode ini dipanggil sekali saat `State` pertama kali dibuat. Di sini, kita menginisialisasi variabel seperti `scrollController` dan menambahkan listener untuk menangani peristiwa scroll. `initState()` memastikan bahwa pengaturan awal untuk scroll controller terjadi sebelum widget ditampilkan.
+
+- dispose() (Langkah 13): Metode ini dipanggil ketika `State` widget tidak lagi digunakan, biasanya saat widget dihapus dari widget tree. Di sini, kita membersihkan `scrollController` dengan memanggil `dispose()` untuk mencegah kebocoran memori dan melepaskan sumber daya yang digunakan oleh controller.
+
+Kedua metode ini mengelola siklus hidup objek dengan baik, memastikan pengaturan yang benar saat widget pertama kali muncul dan membersihkan sumber daya saat tidak diperlukan lagi.
